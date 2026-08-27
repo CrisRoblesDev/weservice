@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WE-SERVICE | Especialistas en Análisis, Retiro y Disposición Segura de Asbesto</title>
+  <meta name="description" content="Empresa especialista en análisis, retiro y disposición final segura de materiales con asbesto. Experiencia operativa en Normativa Chilena de Seguridad, Salud Ocupacional, Medio Ambiente y Construcción.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logo.png">
+
+  <!-- Google Fonts: Outfit, Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. VARIABLES & PALETA EJECUTIVA
+       ========================================================================== */
+    :root {
+      /* Fondos */
+      --bg-white: #FFFFFF;
+      --bg-canvas: #F8FAFC;
+      --bg-alt: #F1F5F9;
+      --bg-subtle: #E2E8F0;
+      
+      /* Colores Principales */
+      --color-accent: #1D4ED8;          /* Azul Real / Cobalto */
+      --color-primary: #0F2942;         /* Azul marino institucional */
+      --color-teal: #0D9488;            /* Verde seguridad */
+      --color-gray-highlight: #5A6A80;  /* Gris claro sofisticado para el titular */
+      
+      /* Escala de Textos */
+      --text-dark: #09182B;
+      --text-body: #334155;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+
+      /* Bordes Rectos de Precisión */
+      --border-subtle: #E2E8F0;
+      --border-card: #E2E8F0;
+      --border-card-hover: #CBD5E1;
+
+      /* Sombras */
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 30px -4px rgba(15, 23, 42, 0.10);
+
+      /* Tipografías */
+      --font-heading: 'Outfit', sans-serif;
+      --font-mono: 'Space Grotesk', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      /* Bordes Rectos Modernos */
+      --radius-btn: 4px;
+      --radius-card: 6px;
+
+      /* Transiciones */
+      --transition: all 0.22s ease-in-out;
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==========================================================================
+       2. HEADER FIJO Y NO REDONDEADO (FONDO BLANCO PURO)
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 72px;
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-logo img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-item a {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-body);
+      position: relative;
+      padding: 0.4rem 0;
+    }
+
+    .nav-item a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-item a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: var(--transition);
+    }
+
+    .nav-item a:hover::after {
+      width: 100%;
+    }
+
+    /* BOTONES GRIS CLARO CON EFECTO GLASS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.925rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-btn);
+      transition: var(--transition);
+      white-space: nowrap;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .btn-primary {
+      background: rgba(241, 245, 249, 0.92);
+      color: #0F172A;
+      border: 1px solid rgba(203, 213, 225, 0.85);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+    }
+
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.98);
+      border-color: #94A3B8;
+      color: #0F172A;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.09);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.70);
+      color: #334155;
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+
+    .btn-outline:hover {
+      background: rgba(241, 245, 249, 0.95);
+      border-color: #CBD5E1;
+      color: #0F172A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    }
+
+    .mobile-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      cursor: pointer;
+    }
+
+    .mobile-btn span {
+      display: block;
+      height: 2.5px;
+      width: 100%;
+      background-color: var(--text-dark);
+      border-radius: 2px;
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu-drawer {
+      position: fixed;
+      top: 72px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 72px);
+      background: #FFFFFF;
+      padding: 2.5rem 2rem;
+      transition: left 0.3s ease;
+      z-index: 999;
+      box-shadow: var(--shadow-md);
+    }
+
+    .mobile-menu-drawer.open {
+      left: 0;
+    }
+
+    .mobile-menu-drawer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .mobile-menu-drawer a {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* ==========================================================================
+       3. SECCIÓN 1: INICIO (HERO AJUSTADO A 100vh EXACTO PARA VERSE COMPLETO)
+       ========================================================================== */
+    .hero-section {
+      margin-top: 72px;
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 2.5rem 0;
+      background: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.58) 48%, rgba(255, 255, 255, 0.12) 100%),
+        url('hero_bg.jpg') center/cover no-repeat;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-content-left {
+      max-width: 680px;
+    }
+
+    .hero-tag-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.75rem;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--color-gray-highlight);
+      border-radius: var(--radius-btn);
+      color: var(--color-primary);
+      font-family: var(--font-mono);
+      font-size: 0.775rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title-h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.2vw, 2.95rem);
+      font-weight: 900;
+      color: var(--text-dark);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    /* "Análisis, Retiro y Disposición Final Segura" en Gris Claro Elegante */
+    .hero-title-h1 span {
+      color: var(--color-gray-highlight);
+      background: linear-gradient(135deg, #4A5B70 0%, #6E7F96 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc-p {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      max-width: 620px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(15, 41, 66, 0.12);
+    }
+
+    .hero-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .hero-stat-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--color-teal);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       4. SECCIÓN 2: SERVICIOS (4 COLUMNAS HORIZONTALES)
+       ========================================================================== */
+    .section-spacing {
+      padding: 5.5rem 0;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title-h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle-p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Grid Horizontal de 4 Servicios */
+    .services-grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card-horiz {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .service-card-horiz:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+    }
+
+    .service-card-media {
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-alt);
+    }
+
+    .service-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card-horiz:hover .service-card-media img {
+      transform: scale(1.06);
+    }
+
+    .service-card-num-tag {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.55rem;
+      border-radius: var(--radius-btn);
+    }
+
+    .service-card-body {
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.65rem;
+      line-height: 1.3;
+    }
+
+    .service-card-text {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    /* ==========================================================================
+       5. SECCIÓN 3: QUIÉNES SOMOS
+       ========================================================================== */
+    .about-section {
+      background-color: var(--bg-white);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .about-grid-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-lead-text {
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-box-callout {
+      background: var(--bg-alt);
+      border-left: 4px solid var(--color-accent);
+      padding: 1.5rem 1.75rem;
+      border-radius: var(--radius-btn);
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      line-height: 1.65;
+    }
+
+    .about-pillars-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pillar-box-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      transition: var(--transition);
+    }
+
+    .pillar-box-item:hover {
+      background: #FFFFFF;
+      border-color: var(--color-accent);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pillar-icon-wrap {
+      width: 44px;
+      height: 44px;
+      background: rgba(29, 78, 216, 0.08);
+      color: var(--color-accent);
+      border-radius: var(--radius-btn);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pillar-title-text {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* ==========================================================================
+       6. SECCIÓN 4: CÓMO TRABAJAMOS (5 PASOS HORIZONTALES CON FLECHAS)
+       ========================================================================== */
+    .workflow-section {
+      background-color: var(--bg-canvas);
+    }
+
+    .workflow-steps-horizontal {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      position: relative;
+    }
+
+    .workflow-step-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 1.75rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .workflow-step-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .workflow-step-card:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -15px;
+      top: 24px;
+      width: 24px;
+      height: 24px;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 800;
+      z-index: 2;
+      box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3);
+    }
+
+    .step-badge-node {
+      width: 38px;
+      height: 38px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-size: 1.15rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-btn);
+      margin-bottom: 1.25rem;
+    }
+
+    .step-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .step-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       7. SECCIÓN 5: COMPROMISO
+       ========================================================================== */
+    .commitment-section {
+      background-color: var(--bg-white);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .commitment-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .commitment-quote {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+
+    .norms-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .norm-badge-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-btn);
+      padding: 1.25rem 0.85rem;
+      font-family: var(--font-heading);
+      font-size: 0.925rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .norm-badge-card:hover {
+      background: #FFFFFF;
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ==========================================================================
+       8. SECCIÓN 6: PROFESIONALES
+       ========================================================================== */
+    .team-lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .team-lead-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .team-lead-card:hover {
+      border-color: var(--border-card-hover);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .team-member-name {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-member-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+      display: block;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .team-credentials-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .team-credentials-list li {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .team-credentials-list li svg {
+      width: 16px;
+      height: 16px;
+      color: var(--color-teal);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .team-compact-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .team-compact-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .team-compact-item:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .compact-name {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .compact-role {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       9. SECCIÓN 7: CONTACTO (DIRECTO SIN FORMULARIO)
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--bg-white);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .contact-executive-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-title-h3 {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .contact-desc-text {
+      font-size: 1.1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .contact-direct-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contact-direct-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-direct-card:hover {
+      background: #FFFFFF;
+      border-color: var(--color-accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-big-icon-wrap {
+      width: 58px;
+      height: 58px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-btn);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card-value {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-card-value:hover {
+      color: var(--color-accent);
+    }
+
+    .contact-card-sub {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.25rem 0;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    /* ==========================================================================
+       10. RESPONSIVE MEDIA QUERIES
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .services-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .workflow-steps-horizontal {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .workflow-step-card:not(:last-child)::after {
+        display: none;
+      }
+
+      .about-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .team-lead-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .norms-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-direct-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav-list, .header-actions {
+        display: none;
+      }
+
+      .mobile-btn {
+        display: flex;
+      }
+
+      .hero-section {
+        min-height: auto;
+        padding: 4rem 0;
+      }
+
+      .services-grid-4col {
+        grid-template-columns: 1fr;
+      }
+
+      .team-compact-row {
+        grid-template-columns: 1fr;
+      }
+
+      .norms-grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER FIJO Y NO REDONDEADO -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo">
+        <img src="Logo.png" alt="WE-SERVICE Logo" width="165" height="42">
+      </a>
+
+      <!-- NAVEGACIÓN EN EL ORDEN EXACTO SOLICITADO -->
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a href="#quienes-somos">Quiénes somos</a></li>
+        <li class="nav-item"><a href="#como-trabajamos">Cómo trabajamos</a></li>
+        <li class="nav-item"><a href="#compromiso">Compromiso</a></li>
+        <li class="nav-item"><a href="#profesionales">Profesionales</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="#contacto" class="btn btn-primary">
+          Contacto
+        </a>
+      </div>
+
+      <div class="mobile-btn" id="mobileToggleBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu-drawer" id="mobileDrawerMenu">
+    <ul>
+      <li><a href="#inicio" class="mobile-link">Inicio</a></li>
+      <li><a href="#servicios" class="mobile-link">Servicios</a></li>
+      <li><a href="#quienes-somos" class="mobile-link">Quiénes somos</a></li>
+      <li><a href="#como-trabajamos" class="mobile-link">Cómo trabajamos</a></li>
+      <li><a href="#compromiso" class="mobile-link">Compromiso</a></li>
+      <li><a href="#profesionales" class="mobile-link">Profesionales</a></li>
+      <li><a href="#contacto" class="mobile-link">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- 1. SECCIÓN: INICIO (HERO AJUSTADO A 100vh EXACTO PARA VERSE COMPLETO) -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <div class="hero-content-left">
+        <div class="hero-tag-box">
+          WE-SERVICE > Ingeniería y Gestión Ambiental
+        </div>
+        <h1 class="hero-title-h1">
+          Especialistas en <span>Análisis, Retiro y Disposición Final Segura</span> de Materiales con Asbesto
+        </h1>
+        <p class="hero-desc-p" style="color: #0F2942; font-weight: 700;">
+          Contamos con amplia experiencia operativa y riguroso apego a la Normativa Chilena de Seguridad, Salud Ocupacional, Medio Ambiente y Construcción.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn btn-primary">
+            Iniciar Consulta Técnica
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <a href="#servicios" class="btn btn-outline">
+            Ver Nuestros Servicios
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>D.S. N.º 656/2000 MINSAL</span>
+          </div>
+          <div class="hero-stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>Convenio N.º 162 OIT</span>
+          </div>
+          <div class="hero-stat-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Ley 16.744</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SECCIÓN: SERVICIOS (4 COLUMNAS HORIZONTALES) -->
+  <section class="section-spacing" id="servicios">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-kicker">WE-SERVICE ></span>
+        <h2 class="section-title-h2">Nuestros Servicios</h2>
+        <p class="section-subtitle-p">
+          Soluciones técnicas integrales y certificadas en cada etapa del manejo de asbesto.
+        </p>
+      </div>
+
+      <div class="services-grid-4col">
+        <!-- Servicio 1 -->
+        <div class="service-card-horiz">
+          <div class="service-card-media">
+            <img src="servicio_muestras.jpg" alt="Toma de muestras y análisis en terreno de asbesto friable">
+            <div class="service-card-num-tag">01</div>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Toma de Muestras y Análisis en Terreno</h3>
+            <p class="service-card-text">
+              Toma de muestras técnica y análisis cualitativo/cuantitativo en terreno de residuos de asbesto friable y no friable con protocolos de sellado seguro.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="service-card-horiz">
+          <div class="service-card-media">
+            <img src="servicio_laboratorio.jpg" alt="Envió de muestras a laboratorios internacionales">
+            <div class="service-card-num-tag">02</div>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Laboratorios Internacionales</h3>
+            <p class="service-card-text">
+              Envío de muestras a laboratorios internacionales acreditados cuando corresponda, emitiendo informes técnicos certificados de validez legal.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="service-card-horiz">
+          <div class="service-card-media">
+            <img src="servicio_extraccion.jpg" alt="Solicitud de permisos en SEREMI y extracción controlada">
+            <div class="service-card-num-tag">03</div>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Permisos SEREMI y Extracción Controlada</h3>
+            <p class="service-card-text">
+              Solicitud de permisos en SEREMI y extracción controlada, con equipos de protección certificados y procedimientos validados por SEREMI de Salud, minimizando riesgos tanto para trabajadores de la empresa como para la población colindante.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="service-card-horiz">
+          <div class="service-card-media">
+            <img src="servicio_disposicion.jpg" alt="Disposición final y asesoría">
+            <div class="service-card-num-tag">04</div>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Disposición Final</h3>
+            <p class="service-card-text">
+              Disposición final segura, transporte autorizado con manifiesto SIDREP, asesoría jurídica y entrega conforme de las instalaciones según la legislación vigente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SECCIÓN: QUIÉNES SOMOS -->
+  <section class="section-spacing about-section" id="quienes-somos">
+    <div class="container">
+      <div class="about-grid-layout">
+        <div>
+          <span class="section-kicker">WE-SERVICE ></span>
+          <h2 class="section-title-h2">¿Quiénes somos?</h2>
+          <p class="about-lead-text">
+            Empresa especialista en análisis, retiro y disposición final segura de materiales con asbesto.
+          </p>
+          <div class="about-box-callout">
+            Tenemos experiencia operativa en Normativa Chilena de Seguridad, Salud Ocupacional, Medio Ambiente y Construcción.
+          </div>
+        </div>
+
+        <div class="about-pillars-stack">
+          <div class="pillar-box-item">
+            <div class="pillar-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="pillar-title-text">Seguridad y Salud Ocupacional</div>
+          </div>
+
+          <div class="pillar-box-item">
+            <div class="pillar-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div class="pillar-title-text">Medio Ambiente</div>
+          </div>
+
+          <div class="pillar-box-item">
+            <div class="pillar-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <div class="pillar-title-text">Construcción</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SECCIÓN: CÓMO TRABAJAMOS (5 PASOS HORIZONTALES CON FLECHAS) -->
+  <section class="section-spacing workflow-section" id="como-trabajamos">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-kicker">WE-SERVICE ></span>
+        <h2 class="section-title-h2">¿Cómo trabajamos?</h2>
+        <p class="section-subtitle-p">
+          Metodología sistemática, transparente y normada en 5 etapas secuenciales.
+        </p>
+      </div>
+
+      <div class="workflow-steps-horizontal">
+        <!-- Paso 1 -->
+        <div class="workflow-step-card">
+          <div class="step-badge-node">1</div>
+          <h3 class="step-card-title">Evaluación inicial</h3>
+          <p class="step-card-desc">
+            Inspección presencial o con datos del lugar, identificación técnica de materiales y matriz de riesgos.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="workflow-step-card">
+          <div class="step-badge-node">2</div>
+          <h3 class="step-card-title">Propuesta clara</h3>
+          <p class="step-card-desc">
+            Definición de alcance, métodos certificados, cronograma estricto y costos transparentes sin letra chica.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="workflow-step-card">
+          <div class="step-badge-node">3</div>
+          <h3 class="step-card-title">Ejecución segura</h3>
+          <p class="step-card-desc">
+            Delimitación de zona aislada, personal equipado con EPP certificado y monitoreo constante en faena.
+          </p>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="workflow-step-card">
+          <div class="step-badge-node">4</div>
+          <h3 class="step-card-title">Disposición responsable</h3>
+          <p class="step-card-desc">
+            Etiquetado bajo norma, traslado autorizado y disposición final en instalaciones y rellenos certificados.
+          </p>
+        </div>
+
+        <!-- Paso 5 -->
+        <div class="workflow-step-card">
+          <div class="step-badge-node">5</div>
+          <h3 class="step-card-title">Cierre y respaldo</h3>
+          <p class="step-card-desc">
+            Informe técnico final con respaldo legal consolidado para su total tranquilidad y trámites oficiales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECCIÓN: COMPROMISO -->
+  <section class="section-spacing commitment-section" id="compromiso">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-kicker">Estándar Normativo</span>
+        <h2 class="section-title-h2">Compromiso</h2>
+      </div>
+
+      <div class="commitment-shell">
+        <h3 class="commitment-quote">
+          “Cumplimos estrictamente con normativas vigentes: Decreto Supremo N.º 656/2000 MINSAL, Convenio N.º 162 de la OIT, Decreto 44, MINSAL, Ley 16.744 y toda regulación aplicable. Su seguridad, la de su entorno y la del medio ambiente es nuestro estándar.”
+        </h3>
+
+        <div class="norms-grid-4">
+          <div class="norm-badge-card">
+            Decreto Supremo N.º 656/2000 MINSAL
+          </div>
+          <div class="norm-badge-card">
+            Convenio N.º 162 de la OIT
+          </div>
+          <div class="norm-badge-card">
+            Decreto 44, MINSAL
+          </div>
+          <div class="norm-badge-card">
+            Ley 16.744
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SECCIÓN: PROFESIONALES -->
+  <section class="section-spacing" id="profesionales">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-kicker">Equipo Multidisciplinario</span>
+        <h2 class="section-title-h2">Nuestros Profesionales</h2>
+        <p class="section-subtitle-p">
+          Especialistas con sólida formación de postgrado y certificaciones de alto nivel.
+        </p>
+      </div>
+
+      <div class="team-lead-grid">
+        <!-- Rodrigo Briones Riquelme -->
+        <div class="team-lead-card">
+          <h3 class="team-member-name">Rodrigo Briones Riquelme</h3>
+          <span class="team-member-role">Ingeniero en Prevención de Riesgos</span>
+          <ul class="team-credentials-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Ingeniero en Prevención de Riesgos de la Universidad Tecnológica Metropolitana.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Magíster en Medio Ambiente (E) de la Universidad de Santiago.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>“Experto en Prevención de Riesgos de la Industria Extractiva Minera” (Sernageomin) Categoría B.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Diploma de Postítulo “Gestión para la Reducción del Riesgo de Desastres”, Universidad de Chile.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Paulo Garrido Aguirre -->
+        <div class="team-lead-card">
+          <h3 class="team-member-name">Paulo Garrido Aguirre</h3>
+          <span class="team-member-role">Prevención de Riesgos & Gestión Ambiental</span>
+          <ul class="team-credentials-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Ingeniero de Ejecución en Prevención de Riesgos Universidad Arturo Prat.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Máster en Dirección de Prevención de Riesgos y Gestión Ambiental, IEDE.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Diplomado Ergonomía y Salud Laboral: Optimización del Entorno de Trabajo.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Curso auditor interno ISO Auditor Interno en sistema de Gestión integrados – ISO 9001:2015, ISO 14001: 2015 E ISO 45001:2018.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Diplomado en Gestión de Procesos y Modelación, Juan Bravo C. / UCINF.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Diplomado en Educación por Competencias, AIEP.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Capacitaciones Adicionales: Protocolos MINSAL, Ley de Lobby, Ley de Concesiones, Manejo de Emergencias.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="team-compact-row">
+        <div class="team-compact-item">
+          <div>
+            <h4 class="compact-name">Joaquín Castillo</h4>
+            <p class="compact-role">Ingeniero civil en Construcción</p>
+          </div>
+        </div>
+
+        <div class="team-compact-item">
+          <div>
+            <h4 class="compact-name">Leopoldo Moreno</h4>
+            <p class="compact-role">Arquitecto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SECCIÓN: CONTACTO (DIRECTO SIN FORMULARIO) -->
+  <section class="section-spacing contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-executive-wrapper">
+        <span class="section-kicker">Contacto Directo</span>
+        <h3 class="contact-title-h3">Inicie su Consulta Técnica</h3>
+        <p class="contact-desc-text">
+          Comuníquese directamente con nuestros ingenieros especialistas para coordinar la evaluación, muestreo y retiro seguro de materiales con asbesto bajo normativa legal vigente.
+        </p>
+
+        <div class="contact-direct-cards-grid">
+          <!-- Tarjeta de Teléfono -->
+          <a href="tel:+56987654321" class="contact-direct-card">
+            <div class="contact-big-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="contact-card-label">Teléfono / Atención Inmediata</span>
+            <span class="contact-card-value">+56 9 8765 4321</span>
+            <span class="contact-card-sub">Lunes a Viernes 08:30 - 18:30 hrs</span>
+          </a>
+
+          <!-- Tarjeta de Correo -->
+          <a href="mailto:contacto@we-service.cl" class="contact-direct-card">
+            <div class="contact-big-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span class="contact-card-label">Correo Electrónico</span>
+            <span class="contact-card-value">contacto@we-service.cl</span>
+            <span class="contact-card-sub">Respuesta técnica en menos de 24 horas</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="Logo.png" alt="WE-SERVICE">
+      </div>
+      <div>
+        <span>&copy; 2026 WE-SERVICE. Todos los derechos reservados. Normativa Chilena de Seguridad, Salud Ocupacional, Medio Ambiente y Construcción.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('mobileToggleBtn');
+      const drawer = document.getElementById('mobileDrawerMenu');
+      const links = document.querySelectorAll('.mobile-link');
+
+      toggle?.addEventListener('click', () => {
+        drawer.classList.toggle('open');
+      });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          drawer.classList.remove('open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
