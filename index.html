@@ -737,7 +737,7 @@
        ========================================================================== */
     .team-lead-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       margin-bottom: 1.5rem;
     }
@@ -799,45 +799,9 @@
       margin-top: 3px;
     }
 
-    .team-compact-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    .team-compact-item {
-      background: #FFFFFF;
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-card);
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: var(--transition);
-    }
-
-    .team-compact-item:hover {
-      border-color: var(--color-accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .compact-name {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
-
-    .compact-role {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
     /* ==========================================================================
-       9. SECCIÓN 7: CONTACTO (DIRECTO SIN FORMULARIO)
-       ========================================================================== */
+        9. SECCIÓN 7: CONTACTO (DIRECTO SIN FORMULARIO)
+        ========================================================================== */
     .contact-section {
       background-color: var(--bg-white);
       border-top: 1px solid var(--border-subtle);
@@ -867,8 +831,8 @@
 
     .contact-direct-cards-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
 
     .contact-direct-card {
@@ -917,19 +881,40 @@
 
     .contact-card-value {
       font-family: var(--font-heading);
-      font-size: 1.45rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--text-dark);
-      margin-bottom: 0.75rem;
-    }
-
-    .contact-card-value:hover {
-      color: var(--color-accent);
+      margin-bottom: 0.25rem;
     }
 
     .contact-card-sub {
       font-size: 0.875rem;
       color: var(--text-muted);
+    }
+
+    .contact-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .contact-card-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: var(--transition);
+      padding: 0.25rem 0;
+    }
+
+    .contact-card-action:hover {
+      color: var(--color-primary);
+      gap: 0.6rem;
     }
 
     /* Footer */
@@ -1031,9 +1016,7 @@
         grid-template-columns: 1fr;
       }
 
-      .team-compact-row {
-        grid-template-columns: 1fr;
-      }
+    }
 
       .norms-grid-4 {
         grid-template-columns: 1fr;
@@ -1376,10 +1359,42 @@
       </div>
 
       <div class="team-lead-grid">
+        <!-- Joaquín Castillo -->
+        <div class="team-lead-card">
+          <h3 class="team-member-name">Joaquín Castillo</h3>
+          <span class="team-member-role">Gerencia de Negocio</span>
+          <ul class="team-credentials-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Constructor Civil de la Universidad Técnica Federico Santa María.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Magister en Construcción Industrializada en Madera, Universidad De Concepción.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Curso de Lean Construction, Universidad De Talca.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Diplomado en Gestión De La Construcción, Pontificia Universidad Católica De Chile.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Experto en dirigir el ciclo completo del negocio constructivo —desde la planificación estratégica y evaluación técnico-económica hasta la entrega final— garantizando la optimización de costos, plazos, calidad y seguridad.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Gestor orientado a la mejora continua, la eficiencia operativa y la maximización de la rentabilidad del proyecto a través de la gestión de equipos multidisciplinarios.</span>
+            </li>
+          </ul>
+        </div>
+
         <!-- Rodrigo Briones Riquelme -->
         <div class="team-lead-card">
           <h3 class="team-member-name">Rodrigo Briones Riquelme</h3>
-          <span class="team-member-role">Ingeniero en Prevención de Riesgos</span>
+          <span class="team-member-role">Jefe de Oficina Técnica</span>
           <ul class="team-credentials-list">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1391,11 +1406,15 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>“Experto en Prevención de Riesgos de la Industria Extractiva Minera” (Sernageomin) Categoría B.</span>
+              <span>«Experto en Prevención de Riesgos de la Industria Extractiva Minera» (Sernageomin) Categoría B.</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Diploma de Postítulo “Gestión para la Reducción del Riesgo de Desastres”, Universidad de Chile.</span>
+              <span>Diploma de Postítulo «Gestión para la Reducción del Riesgo de Desastres», Universidad de Chile.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Diplomado en Retiro de Asbesto.</span>
             </li>
           </ul>
         </div>
@@ -1403,23 +1422,27 @@
         <!-- Paulo Garrido Aguirre -->
         <div class="team-lead-card">
           <h3 class="team-member-name">Paulo Garrido Aguirre</h3>
-          <span class="team-member-role">Prevención de Riesgos & Gestión Ambiental</span>
+          <span class="team-member-role">Jefe de Operaciones</span>
           <ul class="team-credentials-list">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Ingeniero de Ejecución en Prevención de Riesgos Universidad Arturo Prat.</span>
+              <span>Ingeniero de Ejecución en Prevención de Riesgos, Universidad Arturo Prat.</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Máster en Dirección de Prevención de Riesgos y Gestión Ambiental, IEDE.</span>
+              <span>Máster en Dirección de Prevención de Riesgos y Gestión Ambiental, IEDE Business School (Universidad Europea de Madrid).</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Diplomado Ergonomía y Salud Laboral: Optimización del Entorno de Trabajo.</span>
+              <span>Diplomado en Ergonomía y Salud Laboral: Optimización del Entorno de Trabajo.</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Curso auditor interno ISO Auditor Interno en sistema de Gestión integrados – ISO 9001:2015, ISO 14001: 2015 E ISO 45001:2018.</span>
+              <span>Curso Desarrollo y Gestión de Negocios, Universidad Mayor.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Auditor Interno en Sistema de Gestión Integrados — ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018.</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1436,22 +1459,6 @@
           </ul>
         </div>
       </div>
-
-      <div class="team-compact-row">
-        <div class="team-compact-item">
-          <div>
-            <h4 class="compact-name">Joaquín Castillo</h4>
-            <p class="compact-role">Ingeniero civil en Construcción</p>
-          </div>
-        </div>
-
-        <div class="team-compact-item">
-          <div>
-            <h4 class="compact-name">Leopoldo Moreno</h4>
-            <p class="compact-role">Arquitecto</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1465,26 +1472,77 @@
           Comuníquese directamente con nuestros ingenieros especialistas para coordinar la evaluación, muestreo y retiro seguro de materiales con asbesto bajo normativa legal vigente.
         </p>
 
-        <div class="contact-direct-cards-grid">
-          <!-- Tarjeta de Teléfono -->
-          <a href="tel:+56987654321" class="contact-direct-card">
-            <div class="contact-big-icon-wrap">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <span class="contact-card-label">Teléfono / Atención Inmediata</span>
-            <span class="contact-card-value">+56 9 8765 4321</span>
-            <span class="contact-card-sub">Lunes a Viernes 08:30 - 18:30 hrs</span>
-          </a>
+      <div class="contact-direct-cards-grid">
+        <!-- Joaquín Castillo -->
+        <div class="contact-direct-card">
+          <div class="contact-big-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span class="contact-card-label">Gerencia de Negocio</span>
+          <span class="contact-card-value">Joaquín Castillo</span>
+          <div class="contact-card-actions">
+            <a href="tel:+56979975406" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +56 9 7997 5406
+            </a>
+            <a href="mailto:Joaquin.castillo@we-service.cl" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Joaquin.castillo@we-service.cl
+            </a>
+          </div>
+        </div>
 
-          <!-- Tarjeta de Correo -->
-          <a href="mailto:contacto@we-service.cl" class="contact-direct-card">
-            <div class="contact-big-icon-wrap">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <span class="contact-card-label">Correo Electrónico</span>
-            <span class="contact-card-value">contacto@we-service.cl</span>
-            <span class="contact-card-sub">Respuesta técnica en menos de 24 horas</span>
-          </a>
+        <!-- Rodrigo Briones Riquelme -->
+        <div class="contact-direct-card">
+          <div class="contact-big-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span class="contact-card-label">Jefe de Oficina Técnica</span>
+          <span class="contact-card-value">Rodrigo Briones R.</span>
+          <div class="contact-card-actions">
+            <a href="tel:+56994185828" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +56 9 9418 5828
+            </a>
+            <a href="mailto:Rodrigo.briones@we-service.cl" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Rodrigo.briones@we-service.cl
+            </a>
+          </div>
+        </div>
+
+        <!-- Paulo Garrido Aguirre -->
+        <div class="contact-direct-card">
+          <div class="contact-big-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span class="contact-card-label">Jefe de Operaciones</span>
+          <span class="contact-card-value">Paulo Garrido A.</span>
+          <div class="contact-card-actions">
+            <a href="tel:+56979453322" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +56 9 7945 3322
+            </a>
+            <a href="mailto:Paulo.garrido@we-service.cl" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Paulo.garrido@we-service.cl
+            </a>
+          </div>
+        </div>
+
+        <!-- Ventas y Contactos Generales -->
+        <div class="contact-direct-card">
+          <div class="contact-big-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span class="contact-card-label">Ventas y Contactos</span>
+          <span class="contact-card-value">Solicita tu cotización</span>
+          <div class="contact-card-actions">
+            <a href="mailto:contacto@we-service.cl" class="contact-card-action">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contacto@we-service.cl
+            </a>
+          </div>
         </div>
       </div>
     </div>
