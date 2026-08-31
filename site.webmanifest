@@ -1,0 +1,12 @@
+{
+  "name": "WE-SERVICE",
+  "short_name": "WE-SERVICE",
+  "description": "Especialistas en Análisis, Retiro y Disposición Segura de Asbesto",
+  "icons": [
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0F2942",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}
